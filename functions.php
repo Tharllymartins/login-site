@@ -52,3 +52,14 @@ function get_movies($con){
 	$query_result = mysqli_query($con, $query);
 	return $query_result;
 }
+
+
+function del_movie($con, $id){
+	$query = "DELETE FROM movies where ID=$id;";
+
+	if(mysqli_query($con, $query)){
+		return true;
+	} else {
+		return false;
+	}
+}
