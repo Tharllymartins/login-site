@@ -20,5 +20,14 @@ session_start();
 
 	<br>
 	Hello, <?php echo $user_data['username']; ?>
+
+	<?php
+
+
+	$result = get_movies($con);
+	while($row = mysqli_fetch_array($result)) {
+		echo "<img width='100px'src='upload/$row[image]'>" , "<br>";
+	}
+	?>
 </body>
 </html>
