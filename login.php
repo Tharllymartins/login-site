@@ -49,52 +49,45 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="style.css">
 	<title>Login</title>
 </head>
 <body>
-
-	<style type="text/css">
 	
-	#text{
+<div class="box-background">
+<div class="painel">
 
-		height: 25px;
-		border-radius: 5px;
-		padding: 4px;
-		border: solid thin #aaa;
-		width: 100%;
-	}
+	<div id="box-form">
+	
+		<form method="post" class="formm">
+			<h1 class="title">Welcome to AOT
+			</h1>
+			<h2  class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nam adipisci ratione at. Quasi a quaerat aut reprehenderit officiis dignissimos, qui nihil eos tempore tempora mollitia cupiditate. Repudiandae, quod aspernatur?</h2>
 
-	#button{
+			<div class="form__div">
+                    <input type="text" class="form__input" placeholder=" ">
+                    <label for="" class="form__label">Email</label>
+                </div>
 
-		padding: 10px;
-		width: 100px;
-		color: white;
-		background-color: lightblue;
-		border: none;
-	}
+                <div class="form__div">
+                    <input type="password" class="form__input" placeholder=" ">
+                    <label for="" class="form__label">Password</label>
+                </div>
+				<h4>Have an Accontu <a href="#">Sing In</a></h4> 
 
-	#box{
-
-		background-color: grey;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
-	}
-
-	</style>
-
-	<div id="box">
-		
-		<form method="post">
-			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
-
-			<input id="text" type="text" name="user_name"><br><br>
-			<input id="text" type="password" name="password"><br><br>
-
-			<input id="button" type="submit" value="Login"><br><br>
-
-			<a href="signup.php">Click to Signup</a><br><br>
 		</form>
 	</div>
+	</div>	
+	<div class="painel-02">
+	<div id="box-form">
+		<form method="post">
+			<img src="avatar.png" alt="" class="imagem">
+		</form>
+	</div>
+	</div>	
+
+</div>
+</div>
+
 </body>
 </html>
