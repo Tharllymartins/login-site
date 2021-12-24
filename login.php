@@ -65,16 +65,18 @@ session_start();
 			<h2  class="sub-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nam adipisci ratione at. Quasi a quaerat aut reprehenderit officiis dignissimos, qui nihil eos tempore tempora mollitia cupiditate. Repudiandae, quod aspernatur?</h2>
 
 			<div class="form__div">
-                    <input type="text" class="form__input" placeholder=" ">
+                    <input type="text" class="form__input" placeholder=" " name="user_name">
                     <label for="" class="form__label">Email</label>
                 </div>
 
                 <div class="form__div">
-                    <input type="password" class="form__input" placeholder=" ">
+                    <input type="password" class="form__input" placeholder=" " name="password">
                     <label for="" class="form__label">Password</label>
                 </div>
+				<input type="submit" class="btn-login" value="Signin">
 				<h4>Have an Accontu <a href="#">Sing In</a></h4> 
 
+				
 		</form>
 	</div>
 	</div>	
