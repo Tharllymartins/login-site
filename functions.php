@@ -47,10 +47,20 @@ function register_movie($con, $FILES, $name, $description){
 }
 
 
-function get_movies($con){
+function get_all_movies($con){
 	$query = "SELECT * FROM movies;";
 	$query_result = mysqli_query($con, $query);
 	return $query_result;
+}
+
+function get_movies($con, $movie_name){
+	$query = "SELECT * FROM movies WHERE name LIKE '%$movie_name%' ";
+	$query_result = mysqli_query($con, $query);
+	if (mysqli_num_rows($query_result) > 0){
+		return $query_result;
+	} else {
+		return false;
+	}
 }
 
 
