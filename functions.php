@@ -21,7 +21,7 @@ function check_login($con)
 	}
 
 	//redirect to login
-	header("Location: login.php");
+	header("Location: account/login.php");
 	die;
 
 }
@@ -34,7 +34,7 @@ function register_movie($con, $FILES, $name, $description){
 		// Get file name
         $extensao = substr($FILES['arquivo']['name'], -4);
         $name_file = md5(time()) . $extensao;
-        $diretorio = "upload/";
+        $diretorio = "media/movies/";
 		//Get name and description
 
         move_uploaded_file($FILES['arquivo']['tmp_name'], $diretorio.$name_file);

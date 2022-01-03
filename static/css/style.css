@@ -1,0 +1,18 @@
+body{
+  display: flex;
+  justify-content:center ;
+  margin-top: 400px;
+  padding: 0;
+  background-image: url("filme.jpg");
+}
+.section-login{
+  background-color: white;
+  height: 400px;
+  width: 600px;
+  border-radius: 20px;
+}
+.formm{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

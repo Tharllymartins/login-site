@@ -23,22 +23,24 @@ session_start();
 
 	<form action="index.php" method="GET">
 		<input type="text" name="movie_name">
-		<input type="submit" value="Buscar">
+		<input type="submit" value="Buscar" name="q_movie">
 	</form>
 
 	<?php
 
-	if($_SERVER['REQUEST_METHOD'] != "GET"){
+	if(!isset($_GET['q_movie'])){
 		$result = get_all_movies($con);
-		while($row = mysqli_fetch_array($result)) {
-			echo "<img width='100px'src='upload/$row[image]'>" , "<br>";
+		if($result){
+			while($row = mysqli_fetch_array($result)) {
+				echo "<img width='100px'src='media/movies-images/$row[image]'>" , "<br>";
+			}
 		}
 	} else {
 		$result = get_movies($con, $_GET['movie_name']);
 		if($result){
 			while($row = mysqli_fetch_array($result)) {
 				echo $row['name'];
-				echo "<img width='100px'src='upload/$row[image]'>" , "<br>";
+				echo "<img width='100px'src='media/movies-images/$row[image]'>" , "<br>";
 			}
 		} else {
 			echo "Filme não encontrado!";
